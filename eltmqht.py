@@ -38,14 +38,6 @@ async def on_message(message):
         Dshelp.set_thumbnail(url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         Dshelp.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         await message.channel.send(embed=Dshelp)
-
-    if message.content == "Ds내정보":
-        date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
-        Dssowjdqh = discord.Embed(title="**[ 디스봇 ] {}님의 정보**".format(message.author), color=0x8affc6)
-        Dssowjdqh.add_field(name=f"닉네임 : {message.author}\n서버별명 : {message.author.display_name}\n아이디 : {message.author.id}\n가입일 : {str(date.year)}년 {str(date.month)}월 {str(date.day)}일", value=f"{message.author.mention}님의 정보입니다.\n", inline=False
-
-        Dssowjdqh.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
-        await message.channel.send(message.channel, embed=Dssowjdqh)
         
 access_token = os.environ["token"]
 client.run(access_token)
