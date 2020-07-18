@@ -32,11 +32,11 @@ async def on_message(message):
         return None
 
     if message.content == "Ds도움말" or message.content == "Dshelp":
-        cnfrms = discord.Embed(title="**디스봇 / 도움말**", color=0x8affc6)
-        cnfrms.add_field(name="1", value="2", inline=False)
-        cnfrms.set_thumbnail(url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
-        cnfrms.set_footer(text="3" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
-        await message.channel.send(Dshelp)
+        Dshelp = discord.Embed(title="**디스봇 / 도움말**", color=0x8affc6)
+        Dshelp.add_field(name="1", value="2", inline=False)
+        Dshelp.set_thumbnail(url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
+        Dshelp.set_footer(text="3" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
+        await message.channel.send(embed=Dshelp)
 
 access_token = os.environ["token"]
 client.run(access_token)
