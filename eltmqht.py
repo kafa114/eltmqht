@@ -38,11 +38,6 @@ async def on_message(message):
         Dshelp.set_thumbnail(url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         Dshelp.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         await message.channel.send(embed=Dshelp)
-
-    if message.content.startswith("/타이머"):
-        c = message.content[8:]
-        await asyncio.sleep(c)
-        await message.channel.sned("끝")
         
 access_token = os.environ["token"]
 client.run(access_token)
