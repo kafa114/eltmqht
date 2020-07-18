@@ -42,7 +42,7 @@ async def on_message(message):
     if message.content == "Ds내정보":
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
         Dssowjdqh = discord.Embed(title="**[ 디스봇 ] {}님의 정보**".format(message.author), color=0x8affc6)
-        Dssowjdqh.add_field(name=f"닉네임 : {message.author.mention}", value=None, inline=False)
+        Dssowjdqh.add_field(name=f"닉네임 : {message.author}", value=None, inline=False)
         Dssowjdqh.add_field(name=f"서버별명 : {message.author.display_name}", value=None, inline=False)
         Dssowjdqh.add_field(name=f"아이디 : {message.author.id}", value=None, inline=False)
         Dssowjdqh.add_field(name=f"가입일 : {str(date.year)}년 {str(date.month)}월 {str(date.day)}일", value=None, inline=False)
