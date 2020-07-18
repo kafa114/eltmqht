@@ -49,7 +49,7 @@ async def on_message(message):
         Dssowjdqh.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=True)
         Dssowjdqh.add_field(name="아이디", value=message.author.id, inline=True)
         Dssowjdqh.set_thumbnail(url=message.author.avatar_url)
-        Dshelp.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
+        Dssowjdqh.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         await message.channel.send(message.channel, embed=Dssowjdqh)
         
 access_token = os.environ["token"]
