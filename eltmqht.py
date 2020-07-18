@@ -35,7 +35,7 @@ async def on_message(message):
         Dshelp = discord.Embed(title="**[ 디스봇 ] 도움말**", color=0x8affc6)
         Dshelp.add_field(name="기본명령어", value="- Ds( 명령어 )\n- Dshelp / Ds도움말 : 디스봇 도움말을 보여줍니다.", inline=False)
         Dshelp.set_thumbnail(url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
-        Dshelp.set_footer(text="DissBot" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
+        Dshelp.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         await message.channel.send(embed=Dshelp)
 
 access_token = os.environ["token"]
