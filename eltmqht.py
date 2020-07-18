@@ -45,7 +45,7 @@ async def on_message(message):
         Dssowjdqh.add_field(name="닉네임 :", value=message.author.name, inline=False)
         Dssowjdqh.add_field(name="서버별명 :", value=message.author.display_name, inline=False)
         Dssowjdqh.add_field(name="아이디", value=message.author.id, inline=False)
-        Dssowjdqh.add_field(name="가입일 :", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=FalseTrue)
+        Dssowjdqh.add_field(name="가입일 :", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=False)
         Dssowjdqh.set_thumbnail(url=message.author.avatar_url)
         Dssowjdqh.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
         await message.channel.send(message.channel, embed=Dssowjdqh)
