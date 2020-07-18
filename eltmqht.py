@@ -42,13 +42,15 @@ async def on_message(message):
 
     if message.content == "Ds내정보":
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
-        embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="이름", value=message.author.name, inline=True)
-        embed.add_field(name="서버닉네임", value=message.author.display_name, inline=True)
-        embed.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=True)
-        embed.add_field(name="아이디", value=message.author.id, inline=True)
-        embed.set_thumbnail(url=message.author.avatar_url)
-        await message.channel.send(message.channel, embed=embed)
+        Dssowjdqh = discord.Embed(title="**[ 디스봇 ] {}님의 정보**".format(message.author.mention), color=0x8affc6)
+        Dssowjdqh.set_author(name=message.author, icon_url=message.author.avatar_url)
+        Dssowjdqh.add_field(name="이름", value=message.author.name, inline=True)
+        Dssowjdqh.add_field(name="서버닉네임", value=message.author.display_name, inline=True)
+        Dssowjdqh.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=True)
+        Dssowjdqh.add_field(name="아이디", value=message.author.id, inline=True)
+        Dssowjdqh.set_thumbnail(url=message.author.avatar_url)
+        Dshelp.set_footer(text="djs226587#1243 | 디스#5919" , icon_url="https://media.discordapp.net/attachments/734054856678965292/734055038607163412/d2c8518820b21bd3.png")
+        await message.channel.send(message.channel, embed=Dssowjdqh)
         
 access_token = os.environ["token"]
 client.run(access_token)
